@@ -13,7 +13,7 @@ var server = http.createServer(function(req, res){
 }
     else if(req.url.match("/sysinfo")) {
         myHostName=os.hostname();
-        numcpu=os.cpus();
+        totalme=os.totalmem();
         html=`    
         <!DOCTYPE html>
         <html>
@@ -24,7 +24,7 @@ var server = http.createServer(function(req, res){
             <p>Hostname: ${myHostName}</p>
             <p>IP: ${ip.address()}</p>
             <p>Server Uptime: </p>
-            <p>Total Memory: </p>
+            <p>Total Memory: ${totalme()} </p>
             <p>Free Memory: </p>
             <p>Number of CPUs:${numcpu} </p>            
           </body>
