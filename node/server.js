@@ -24,7 +24,7 @@ var server = http.createServer(function(req, res){
             <p>Hostname: ${myHostName}</p>
             <p>IP: ${ip.address()}</p>
             <p>Server Uptime: </p>
-            <p>Total Memory: ${totalme()} </p>
+            <p>Total Memory: ${totalme} </p>
             <p>Free Memory: </p>
             <p>Number of CPUs:${numcpu} </p>            
           </body>
