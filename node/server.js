@@ -15,7 +15,7 @@ var server = http.createServer(function(req, res){
         myHostName=os.hostname();
         totalme=os.totalmem();
         freeme=os.freemem();
-        numcpu=os.cpus();
+        numcpu=os.cpus().length;
         serverup=os.uptime();
         html=`    
         <!DOCTYPE html>
