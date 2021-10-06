@@ -16,6 +16,7 @@ var server = http.createServer(function(req, res){
         totalme=os.totalmem();
         freeme=os.freemem();
         numcpu=os.cpus();
+        serverup=os.uptime();
         html=`    
         <!DOCTYPE html>
         <html>
@@ -25,7 +26,7 @@ var server = http.createServer(function(req, res){
           <body>
             <p>Hostname: ${myHostName}</p>
             <p>IP: ${ip.address()}</p>
-            <p>Server Uptime: </p>
+            <p>Server Uptime: ${serverup}</p>
             <p>Total Memory: ${totalme} </p>
             <p>Free Memory: ${freeme} </p>
             <p>Number of CPUs:${numcpu} </p>            
