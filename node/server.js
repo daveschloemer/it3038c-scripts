@@ -3,7 +3,7 @@ var fs = require("fs");
 var os = require("os");
 var ip = require('ip');
 
-http.createServer(function(req, res){
+var server = http.createServer(function(req, res){
 
     if (req.url === "/") {
         fs.readFile("./public/index.html", "UTF-8", function(err, body){
@@ -13,6 +13,7 @@ http.createServer(function(req, res){
 }
     else if(req.url.match("/sysinfo")) {
         myHostName=os.hostname();
+        numcpu=os.cpus
         html=`    
         <!DOCTYPE html>
         <html>
@@ -25,7 +26,7 @@ http.createServer(function(req, res){
             <p>Server Uptime: </p>
             <p>Total Memory: </p>
             <p>Free Memory: </p>
-            <p>Number of CPUs: </p>            
+            <p>Number of CPUs:${numcpu} </p>            
           </body>
         </html>` 
         res.writeHead(200, {"Content-Type": "text/html"});
