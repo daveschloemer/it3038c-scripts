@@ -29,7 +29,7 @@ var server = http.createServer(function(req, res){
             <p>Server Uptime: ${serverup} Seconds</p>
             <p>Total Memory: ${totalme} MB</p>
             <p>Free Memory: ${freeme} MB</p>
-            <p>Number of CPUs:${numcpu} </p>            
+            <p>Number of CPUs: ${numcpu} </p>            
           </body>
         </html>` 
         res.writeHead(200, {"Content-Type": "text/html"});
