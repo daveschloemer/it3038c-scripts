@@ -5,4 +5,4 @@ r = requests.get('http://localhost:3000')
 data = r.json()
 
 for name in data:
-    print(data[0]['name'], "is", data[0]['color'])
+    print(name['name'] + ' is' + name['color'])
