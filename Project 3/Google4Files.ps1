@@ -19,6 +19,7 @@ if ($answer -eq 'no'){
         $content.Split("*") | Select-String $userInput | Select-Object LineNumber, Line
 }
 }
+exit
 
 
 ##All of this was written on my own. I did ask for help regarding a foreach loop
